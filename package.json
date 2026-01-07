@@ -1,13 +1,20 @@
 {
-  "name": "udemy-react-chart-app",
-  "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "biome check",
-    "format": "biome format --write"
+    "preview": "next build && next start",
+    "clean": "rm -rf .next",
+
+    "check": "biome check .",
+    "fix": "biome check --write .",
+    "format": "biome format --write .",
+
+    "type-check": "tsc --noEmit",
+
+    "prepare": "lefthook install"
   },
   "dependencies": {
     "next": "16.1.1",
@@ -15,11 +22,12 @@
     "react-dom": "19.2.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.2.0",
+    "@biomejs/biome": "2.3.11",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "lefthook": "^2.0.13",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

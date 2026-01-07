@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# udemy-react-chart-app
 
-## Getting Started
+<https://www.udemy.com/course/react-chart-app/>
 
-First, run the development server:
+## 技術スタック
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- [TypeScript](https://www.typescriptlang.org/)
+- [Next.js](https://nextjs.org/)
+- [React](https://ja.react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Biome](https://biomejs.dev/)
+
+## 開発
+
+### 1. 依存関係のインストール
+
+プロジェクトの依存関係をインストールします。
+
+``` bash
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. lefthookの準備
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+lefthookのgitフックを準備します。
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+``` bash
+npm run prepare
+```
 
-## Learn More
+### 3. 開発サーバーの起動
 
-To learn more about Next.js, take a look at the following resources:
+Next.js開発サーバーを起動します。  
+ファイルの変更を監視し、自動的にブラウザを更新します。
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+``` bash
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 4. 型チェック
 
-## Deploy on Vercel
+TypeScriptによる型チェックを実行します。
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+``` bash
+npm run type-check
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 5. コードの自動修正
+
+[Biome](https://biomejs.dev/)を使い、リントエラーやフォーマットの問題を自動で修正します。
+
+``` bash
+npm run fix
+```
+
+### 6. 本番用ビルド
+
+本番用のアプリケーションを`next`ディレクトリにビルドします。  
+ビルド前に型チェックとBiomeによるLintチェックが実行されます。
+
+``` bash
+npm run build
+```
+
+### 7. 本番用プレビュー
+
+ビルドされたアプリケーションをローカルでプレビューします。  
+このコマンドは、まずアプリケーションをビルドし、その後本番サーバーを起動します。
+
+``` bash
+npm run preview
+```
+
+### 8. ビルド成果物の削除
+
+`next`ディレクトリを削除します。
+
+``` bash
+npm run clean
+```
+
+### 9. ビルド成果物の削除
+
+`next`ディレクトリを削除します。
+
+``` bash
+npm run clean
+```
