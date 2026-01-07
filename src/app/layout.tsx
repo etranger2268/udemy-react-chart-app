@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, Noto_Sans_JP } from 'next/font/google';
 import './globals.css';
+import Footer from '@/app/_components/Footer';
 
 type Props = Readonly<{
   children: React.ReactNode;
@@ -27,7 +28,12 @@ export default function RootLayout({ children }: Props) {
   return (
     <html lang="ja">
       <body className={`${inter.variable} ${notoSansJP.variable} antialiased font-sans`}>
-        {children}
+        <div className="flex flex-col min-h-screen p-6">
+          <main className="flex-1">{children}</main>
+          <footer className="h-16 border-t pt-2">
+            <Footer />
+          </footer>
+        </div>
       </body>
     </html>
   );
