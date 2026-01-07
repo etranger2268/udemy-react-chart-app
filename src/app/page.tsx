@@ -1,7 +1,10 @@
 import Link from 'next/link';
 
 export default function HomePage() {
-  const links = [{ href: '/components', display: 'Components - section2' }];
+  const links = [
+    { href: '/components', display: 'Components - section2' },
+    { href: '/countup', display: 'Count up - section3' },
+  ];
   return (
     <div className="ml-4">
       <ul className="list-disc">
