@@ -1,10 +1,8 @@
 'use client';
-import { useState } from 'react';
+import { useCountup } from '@/app/components/_hooks/useCountup';
 
 export default function CountupPage() {
-  const [count, setCount] = useState<number>(0);
-
-  const onClickCountUp = () => setCount((prev) => prev + 1);
+  const { count, onClickCountUp } = useCountup();
 
   return (
     <div className="max-w-4xl mx-auto">
