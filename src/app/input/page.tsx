@@ -1,12 +1,9 @@
 'use client';
 
-import { type ChangeEvent, useState } from 'react';
+import { useRealTimeText } from '@/app/input/_hooks/useRealTimeText';
 
 export default function InputPage() {
-  const [text, setText] = useState<string>('');
-
-  const handleChangeText = (e: ChangeEvent<HTMLInputElement>) => setText(e.currentTarget.value);
-
+  const { text, handleChangeText } = useRealTimeText();
   return (
     <div className="max-w-4xl mx-auto">
       <div className="flex justify-center">
