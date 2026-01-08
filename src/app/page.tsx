@@ -7,6 +7,7 @@ export default function HomePage() {
     { href: '/text', display: 'Text - section04' },
     { href: '/input', display: 'Input - section05' },
     { href: '/background', display: 'Background - section06' },
+    { href: '/feedback', display: 'Feedback - section07' },
   ];
   return (
     <div className="ml-4">
