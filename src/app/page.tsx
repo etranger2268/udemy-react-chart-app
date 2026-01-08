@@ -9,6 +9,7 @@ export default function HomePage() {
     { href: '/background', display: 'Background - section06' },
     { href: '/feedback', display: 'Feedback - section07' },
     { href: '/temperature', display: 'Temperature - section08' },
+    { href: '/quiz', display: 'Quiz - section09' },
   ];
   return (
     <div className="ml-4">
