@@ -1,13 +1,11 @@
 'use client';
 
-import { useState } from 'react';
-import { COLORS } from '@/app/background/constants';
+import { useChangeBgColor } from '@/app/background/_hooks/useChangeBgColor';
 
 export default function BackgroundPage() {
-  const [currentColorIndex, setCurrentColorIndex] = useState<number>(0);
-  const handleChangeColor = () => setCurrentColorIndex((prev) => (prev + 1) % COLORS.length);
+  const { currentColor, handleChangeColor } = useChangeBgColor();
   return (
-    <div className="h-screen" style={{ backgroundColor: COLORS[currentColorIndex] }}>
+    <div className="h-screen" style={{ backgroundColor: currentColor }}>
       <div className="h-screen flex justify-center items-center">
         <button
           type="button"

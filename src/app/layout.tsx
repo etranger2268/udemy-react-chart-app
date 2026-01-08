@@ -32,7 +32,7 @@ export default function RootLayout({ children }: Props) {
           <header className="h-16 border-b pb-2">
             <h1 className="text-4xl font-bold">udemy-react-chart-app</h1>
           </header>
-          <main className="flex-1">{children}</main>
+          <main className="flex-1 mt-4">{children}</main>
           <footer className="h-16 border-t pt-2">
             <Footer />
           </footer>
