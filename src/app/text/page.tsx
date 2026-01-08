@@ -1,13 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useTextShowHidden } from '@/app/text/_hooks/useTextShowHidden';
 
 export default function TextPage() {
-  const [isHidden, setIsHidden] = useState<boolean>(false);
-
-  const handleClickIndicate = () => setIsHidden(false);
-  const handleClickHidden = () => setIsHidden(true);
-
+  const { isHidden, handleClickIndicate, handleClickHidden } = useTextShowHidden();
   return (
     <div className="max-w-4xl mx-auto">
       <div className="flex justify-center">
