@@ -8,6 +8,7 @@ export default function HomePage() {
     { href: '/input', display: 'Input - section05' },
     { href: '/background', display: 'Background - section06' },
     { href: '/feedback', display: 'Feedback - section07' },
+    { href: '/temperature', display: 'Temperature - section08' },
   ];
   return (
     <div className="ml-4">
