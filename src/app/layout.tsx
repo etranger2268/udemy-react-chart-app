@@ -28,11 +28,11 @@ export default function RootLayout({ children }: Props) {
   return (
     <html lang="ja">
       <body className={`${inter.variable} ${notoSansJP.variable} antialiased font-sans`}>
-        <div className="flex flex-col min-h-screen p-6">
+        <div className="flex flex-col max-h-screen p-6 space-y-6">
           <header className="h-16 border-b pb-2">
             <h1 className="text-4xl font-bold">udemy-react-chart-app</h1>
           </header>
-          <main className="flex-1 mt-4">{children}</main>
+          <main className="flex-1">{children}</main>
           <footer className="h-16 border-t pt-2">
             <Footer />
           </footer>

@@ -12,7 +12,7 @@ export default function CountupPage() {
           <button
             type="button"
             onClick={onClickCountUp}
-            className="py-2 px-4 bg-blue-500 text-white rounded-md text-sm transition-all duration-100 font-medium hover:opacity-25"
+            className="py-2 px-4 bg-blue-500 text-white rounded-md text-sm transition-all duration-100 font-medium hover:opacity-75"
           >
             カウントアップ
           </button>

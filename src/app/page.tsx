@@ -6,6 +6,7 @@ export default function HomePage() {
     { href: '/countup', display: 'Count up - section03' },
     { href: '/text', display: 'Text - section04' },
     { href: '/input', display: 'Input - section05' },
+    { href: '/background', display: 'Background - section06' },
   ];
   return (
     <div className="ml-4">

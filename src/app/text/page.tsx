@@ -12,14 +12,14 @@ export default function TextPage() {
           <div className="flex justify-center gap-4">
             <button
               type="button"
-              className="py-2 px-4 bg-blue-500 text-white rounded-md text-sm transition-all duration-300 font-medium hover:opacity-25"
+              className="py-2 px-4 bg-blue-500 text-white rounded-md text-sm transition-all duration-300 font-medium hover:opacity-75"
               onClick={handleClickIndicate}
             >
               表示
             </button>
             <button
               type="button"
-              className="py-2 px-4 bg-blue-500 text-white rounded-md text-sm transition-all duration-300 font-medium hover:opacity-25"
+              className="py-2 px-4 bg-blue-500 text-white rounded-md text-sm transition-all duration-300 font-medium hover:opacity-75"
               onClick={handleClickHidden}
             >
               非表示
