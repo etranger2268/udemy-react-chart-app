@@ -10,6 +10,7 @@ export default function HomePage() {
     { href: '/feedback', display: 'Feedback - section07' },
     { href: '/temperature', display: 'Temperature - section08' },
     { href: '/quiz', display: 'Quiz - section09' },
+    { href: '/famous-saying', display: 'Famous Saying - section11' },
   ];
   return (
     <div className="ml-4">
