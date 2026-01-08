@@ -1,21 +1,10 @@
 'use client';
 
-import { type ChangeEvent, useState } from 'react';
 import { v4 as uuid } from 'uuid';
+import { useDisplayFeedback } from '@/app/feedback/_hooks/useDisplayFeedback';
 
 export default function FeedbackPage() {
-  const [input, setInput] = useState<string>('');
-  const [feedbackList, setFeedbackList] = useState<string[]>([]);
-
-  const handleChangeInput = (e: ChangeEvent<HTMLTextAreaElement>) =>
-    setInput(e.currentTarget.value);
-
-  const handleSubmit = () => {
-    const trimInput = input.trim();
-    if (!trimInput) return;
-    setFeedbackList((prev) => [...prev, input]);
-    setInput('');
-  };
+  const { feedbackList, handleChangeInput, handleSubmit, input } = useDisplayFeedback();
 
   return (
     <div className="max-w-4xl mx-auto">
