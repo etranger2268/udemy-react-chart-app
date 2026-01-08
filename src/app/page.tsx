@@ -4,6 +4,7 @@ export default function HomePage() {
   const links = [
     { href: '/components', display: 'Components - section2' },
     { href: '/countup', display: 'Count up - section3' },
+    { href: '/text', display: 'Text - section4' },
   ];
   return (
     <div className="ml-4">
