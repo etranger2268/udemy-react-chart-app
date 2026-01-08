@@ -1,26 +1,15 @@
 'use client';
 
-import { useState } from 'react';
 import { v4 as uuid } from 'uuid';
-import { CORRECT_ANSWER, OPTIONS } from '@/app/quiz/constants';
+import { useQuiz } from '@/app/quiz/_hooks/useQuiz';
+import { OPTIONS, QUESTION } from '@/app/quiz/constants';
 
 export default function QuizPage() {
-  const [userChoice, setUserChoice] = useState<string | null>(null);
-  const [result, setResult] = useState<'正解' | '不正解' | null>(null);
-
-  const handleChoice = (choice: string) => setUserChoice(choice);
-  const handleSubmit = () => {
-    if (userChoice === CORRECT_ANSWER) {
-      setResult('正解');
-    } else {
-      setResult('不正解');
-    }
-  };
-
+  const { userChoice, result, handleChoice, handleSubmit, loading } = useQuiz();
   return (
     <div className="max-w-4xl mx-auto">
       <div className="flex flex-col justify-center gap-3">
-        <h3 className="text-2xl text-center">質問書きます</h3>
+        <h3 className="text-2xl text-center">{QUESTION}</h3>
         <div className="flex justify-center gap-4">
           {OPTIONS.map((option) => (
             <button
@@ -42,7 +31,7 @@ export default function QuizPage() {
             送信
           </button>
         </div>
-        <h3 className="text-center text-4xl">{result}</h3>
+        <h3 className="text-center text-4xl">{loading ? 'loading...' : result}</h3>
       </div>
     </div>
   );
