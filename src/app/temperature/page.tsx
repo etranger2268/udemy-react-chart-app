@@ -1,15 +1,9 @@
 'use client';
 
-import { type ChangeEvent, useState } from 'react';
+import { useCelsiusToFahrenheit } from '@/app/temperature/_hooks/useCelsiusToFahrenheit';
 
 export default function TemperaturePage() {
-  const [celsius, setCelsius] = useState<number>(0);
-
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) =>
-    setCelsius(Number(e.currentTarget.value));
-
-  const fahrenheit = (celsius * 9) / 5 + 32;
-
+  const { celsius, fahrenheit, handleChange } = useCelsiusToFahrenheit();
   return (
     <div className="max-w-4xl mx-auto">
       <div className="flex flex-col justify-center">
