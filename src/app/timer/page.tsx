@@ -1,14 +1,9 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useDigitalClock } from '@/app/timer/_hooks/useDigitalClock';
 
 export default function TimerPage() {
-  const [currentTime, setCurrentTime] = useState<Date>(new Date());
-
-  useEffect(() => {
-    const timerId = setInterval(() => setCurrentTime(new Date()), 1000);
-    return () => clearInterval(timerId);
-  }, []);
+  const { currentTime } = useDigitalClock();
 
   return (
     <div className="max-w-4xl mx-auto">
