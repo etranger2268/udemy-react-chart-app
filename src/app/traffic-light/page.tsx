@@ -1,14 +1,10 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { INITIAL_LIGHT, type LightType, NEXT_LIGHTS } from '@/app/traffic-light/constants';
+import { useTrafficLight } from '@/app/traffic-light/_hooks/useTrafficLight';
 
 export default function TrafficLightPage() {
-  const [light, setLight] = useState<LightType>(INITIAL_LIGHT);
-  useEffect(() => {
-    const timerId = setInterval(() => setLight((prev) => NEXT_LIGHTS[prev]), 1000);
-    return () => clearInterval(timerId);
-  }, []);
+  const { light } = useTrafficLight();
+
   return (
     <div className="max-w-4xl mx-auto">
       <div className="flex justify-center gap-4">
