@@ -10,6 +10,7 @@ export const useDigitalClock: UseDigitalClockType = () => {
   const [currentTime, setCurrentTime] = useState<Date>(new Date());
 
   useEffect(() => {
+    setCurrentTime(new Date());
     const timerId = setInterval(() => setCurrentTime(new Date()), 1000);
     return () => clearInterval(timerId);
   }, []);
