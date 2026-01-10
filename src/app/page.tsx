@@ -13,6 +13,7 @@ export default function HomePage() {
     { href: '/timer', display: 'Timer - section10' },
     { href: '/famous-saying', display: 'Famous Saying - section11' },
     { href: '/traffic-light', display: 'Traffic Light - section12' },
+    { href: '/stopwatch', display: 'Stopwatch - section13' },
   ];
   return (
     <div className="ml-4">
