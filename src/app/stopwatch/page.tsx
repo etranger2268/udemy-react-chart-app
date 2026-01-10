@@ -1,28 +1,9 @@
 'use client';
-import { useEffect, useState } from 'react';
+
+import { useStopwatch } from '@/app/stopwatch/useStopwatch';
 
 export default function Stopwatch() {
-  const [seconds, setSeconds] = useState<number>(0);
-  const [isActive, setIsActive] = useState<boolean>(false);
-
-  useEffect(() => {
-    let timerId: NodeJS.Timeout | null = null;
-    if (isActive) {
-      timerId = setInterval(() => setSeconds((prev) => prev + 1), 1000);
-    } else {
-      if (timerId) clearInterval(timerId);
-    }
-
-    return () => {
-      if (timerId) clearInterval(timerId);
-    };
-  }, [isActive]);
-
-  const toggle = () => setIsActive((prev) => !prev);
-  const handleResetClick = () => {
-    setSeconds(0);
-    setIsActive(false);
-  };
+  const { seconds, isActive, toggle, handleResetClick } = useStopwatch();
 
   return (
     <div className="max-w-4xl mx-auto">
