@@ -14,6 +14,7 @@ export default function HomePage() {
     { href: '/famous-saying', display: 'Famous Saying - section11' },
     { href: '/traffic-light', display: 'Traffic Light - section12' },
     { href: '/stopwatch', display: 'Stopwatch - section13' },
+    { href: '/starwars', display: 'Star Wars - section14' },
   ];
   return (
     <div className="ml-4">
