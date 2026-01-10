@@ -1,40 +1,9 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-
-type Character = {
-  name: string;
-  height: string;
-  mass: string;
-  hair_color: string;
-  eye_color: string;
-  skin_color: string;
-  birth_year: string;
-  gender: string;
-};
+import { useStarWars } from '@/app/starwars/_hooks/useStarWars';
 
 export default function StarwarsPage() {
-  const [character, setCharacter] = useState<Character | null>(null);
-  const [id, setId] = useState(1);
-
-  useEffect(() => {
-    const fetchCharacter = async () => {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      const res = await fetch(`https://swapi.info/api/people/${id}`);
-      if (!res.ok) {
-        throw new Error('api error');
-      }
-      const data = (await res.json()) as Character;
-      setCharacter(data);
-    };
-
-    fetchCharacter();
-  }, [id]);
-
-  const handleClick = () => {
-    setCharacter(null);
-    setId((prev) => prev + 1);
-  };
+  const { character, handleClick } = useStarWars();
 
   if (!character) {
     return (
