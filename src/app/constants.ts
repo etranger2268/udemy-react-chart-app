@@ -14,4 +14,5 @@ export const LINKS = [
   { href: '/starwars', display: 'Star Wars - section14' },
   { href: '/pokemon', display: 'Pokemon - section15' },
   { href: '/memo', display: 'Memo - section16' },
+  { href: '/todos', display: 'Todos - section16' },
 ];
