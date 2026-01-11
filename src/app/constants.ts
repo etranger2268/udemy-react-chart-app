@@ -16,4 +16,5 @@ export const LINKS = [
   { href: '/memo', display: 'Memo - section16' },
   { href: '/todos', display: 'Todos - section17' },
   { href: '/diary', display: 'Diary - section18' },
+  { href: '/search-user', display: 'Search User - section19' },
 ];
