@@ -35,7 +35,7 @@ export const usePokemon: UsePokemonType = () => {
   const [errorMessage, setErrorMessage] = useState<string>('');
   const [pokemon, setPokemon] = useState<Pokemon | null>(null);
 
-  const handleSetQuery = (e: ChangeEvent<HTMLInputElement>) => setQuery(e.target.value);
+  const handleSetQuery = (e: ChangeEvent<HTMLInputElement>) => setQuery(e.currentTarget.value);
   const fetchPokemon = async () => {
     setPokemon(null);
     setErrorMessage('');
