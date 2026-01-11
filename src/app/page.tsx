@@ -15,6 +15,7 @@ export default function HomePage() {
     { href: '/traffic-light', display: 'Traffic Light - section12' },
     { href: '/stopwatch', display: 'Stopwatch - section13' },
     { href: '/starwars', display: 'Star Wars - section14' },
+    { href: '/pokemon', display: 'Pokemon - section15' },
   ];
   return (
     <div className="ml-4">

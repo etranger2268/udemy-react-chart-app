@@ -29,11 +29,11 @@ const nextConfig: NextConfig = {
 
   images: {
     remotePatterns: [
-      // NOTE: Modify according to the project
-      // {
-      //   protocol: 'https',
-      //   hostname: 'cdn.example.com',
-      // },
+      {
+        protocol: 'https',
+        hostname: 'raw.githubusercontent.com',
+        pathname: '/PokeAPI/sprites/**',
+      },
     ],
   },
 };
